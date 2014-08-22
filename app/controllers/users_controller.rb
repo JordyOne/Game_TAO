@@ -1,4 +1,4 @@
-class UsersController < ActionController::Base
+class UsersController < ApplicationController
   skip_before_filter :ensure_authentication_user
 
   def new
@@ -17,5 +17,9 @@ class UsersController < ActionController::Base
     else
       render :new
     end
+  end
+
+  def show
+    @session_id = session[:user_id]
   end
 end

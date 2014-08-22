@@ -1,4 +1,7 @@
-<h1>new user registration</h1>
+<div class="flex-container">
+  <h1>new user registration</h1>
+</div>
+<div class="flex-container">
 <%= form_for @user, url: users_path do |f| %>
     <div>
       <%= f.label :email %>
@@ -12,3 +15,4 @@
       <%= f.submit 'Register' %>
     </div>
 <% end %>
+</div>
