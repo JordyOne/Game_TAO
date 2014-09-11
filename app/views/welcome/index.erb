@@ -13,7 +13,7 @@
       <%= flash[:notice] %>
   <% end %>
 
-  <%= form_for @user, url: sessions_path do |f| %>
+  <%= form_for @user, url: signin_path do |f| %>
       <div>
         <%= f.label :email %>
         <%= f.email_field :email, autofocus: true %>
@@ -23,7 +23,7 @@
         <%= f.password_field :password %>
       </div>
       <div>
-        <%= f.submit 'Register' %>
+        <%= f.submit "Sign-in" %>
       </div>
   <% end %>
 </div>

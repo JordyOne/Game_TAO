@@ -1,0 +1,12 @@
+<div id="game-page">
+<h1><%= @session_id %></h1>
+<div style="width: 100%;">
+  <div>
+    <object width="550" height="400">
+      <param name="movie" value="<%= @game.source %>">
+      <embed src="<%= @game.source %>" width="550" height="400">
+      </embed>
+    </object>
+  </div>
+</div>
+</div>

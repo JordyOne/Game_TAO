@@ -21,14 +21,20 @@
     align-content: flex-start;
     align-items: stretch;
 }
+.title{
+    font-family: Papyrus, fantasy;
+}
 
 #header {
     background-color: blue;
     opacity: 50;
 }
 body {
-    background-image: url("../images/PNG_transparency_demonstration_1.png");
-    /*background-color: blueviolet;*/
+    background: blueviolet url("../images/PNG_transparency_demonstration_1.png");
     /*background-repeat: repeat-y;*/
+}
+
+object {
+    margin: auto;
 }
 

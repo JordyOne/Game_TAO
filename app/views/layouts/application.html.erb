@@ -2,18 +2,22 @@
 <html>
 <head>
   <title>Gametao</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body class="background_image">
-<div class="flex-container" id="header">
+<div class="flex-container title" id="header">
     <h1>TAO</h1>
-
 </div>
+<% if flash[:base] %>
+<%= flash[:base] %>
+<% end %>
 
-
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>

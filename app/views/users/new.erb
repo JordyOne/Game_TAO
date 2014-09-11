@@ -1,18 +1,27 @@
-<div class="flex-container">
-  <h1>new user registration</h1>
-</div>
-<div class="flex-container">
-<%= form_for @user, url: users_path do |f| %>
-    <div>
-      <%= f.label :email %>
-      <%= f.email_field :email, autofocus: true %>
-    </div>
-    <div>
-      <%= f.label :password %>
-      <%= f.password_field :password %>
-    </div>
-    <div>
-      <%= f.submit 'Register' %>
-    </div>
-<% end %>
+<div class="">
+  <h1>New User Registration</h1>
+  <%= form_for @user, url: users_path do |f| %>
+      <div>
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+      <div>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+      </div>
+      <div>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation %>
+      </div>
+      <div>
+        <%= f.submit 'Register' %>
+      </div>
+  <% end %>
+  <% if @user.errors.any? %>
+      <ul>
+        <% for message_error in @user.errors.full_messages %>
+            <li>* <%= message_error %></li>
+        <% end %>
+      </ul>
+  <% end %>
 </div>

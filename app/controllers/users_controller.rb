@@ -5,14 +5,13 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-
   def create
     @user = User.new(
         email: params[:user][:email],
         password: params[:user][:password]
     )
-
     if @user.save
+      flash[:notice] = "You signed up successfully"
       redirect_to root_path
     else
       render :new
@@ -20,6 +19,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    @session_id = session[:user_id]
+    if session[:user_id]
+      @user = User.find(session[:user_id])
+      @games = Game.all
+    else
+      @user = 'this is not working'
+    end
   end
 end

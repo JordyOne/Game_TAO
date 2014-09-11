@@ -1,1 +1,9 @@
-<h1><%= @session_id %></h1>
+<h1>What cause do you want to play for, <%= @user.email %>?</h1>
+
+<h2>Options:</h2>
+
+<ul>
+  <% @games.each do |game| %>
+      <li><a href="/games/<%= game.id %>"><%= game.name %></a></li>
+  <% end %>
+</ul>
