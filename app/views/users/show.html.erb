@@ -3,7 +3,7 @@
 <h2>Options:</h2>
 
 <ul>
-  <% @games.each do |game| %>
-      <li><a href="/games/<%= game.id %>"><%= game.name %></a></li>
-  <% end %>
+    <% @games.each do |game| %>
+        <li><h1><a href="/games/<%= game.id %>" class="game-link text"><%= game.name %></a></h1></li>
+    <% end %>
 </ul>

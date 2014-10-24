@@ -1,12 +1,26 @@
 <div id="game-page">
-<h1><%= @session_id %></h1>
-<div style="width: 100%;">
-  <div>
-    <object width="550" height="400">
-      <param name="movie" value="<%= @game.source %>">
-      <embed src="<%= @game.source %>" width="550" height="400">
-      </embed>
-    </object>
+  <div class="row">
+  <div class="col-md-8 col-md-offset-2 text">
+  <h1>You are playing to alleviate <%= @game.name %>!!!</h1>
   </div>
-</div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="row">
+        <div class="text">
+          <h1>Random Fact:</h1>
+        </div>
+        <div class="row text">
+          <%= @game.info %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <object width="550" height="400">
+        <param name="movie" value="<%= @game.source %>">
+        <embed src="<%= @game.source %>" width="550" height="400">
+        </embed>
+      </object>
+    </div>
+  </div>
 </div>

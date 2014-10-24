@@ -12,26 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require bootstrap-sprockets
 //= require_tree .
 
 $(document).on('ready', function () {
-    if (document.getElementById("game-page") != null) {
+    $('.game-link').on('click', function () {
         console.log('this works');
-        var $starttime = Date.now || function () {
-            return +new Date;
-        };
-//        This only works if you reload the page, it is annoying.
-        console.log($starttime());
-
-//        $(this).unload(function () {
-//            alert('this works too');
-//        });
-//    }
-//    $(window).onbeforeunload = confirmExit;
-//    function confirmExit(){
-//        alert("confirm exit is being called");
-//        return false;
-    }
+    });
 });
-

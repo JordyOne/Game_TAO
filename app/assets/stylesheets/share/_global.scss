@@ -1,0 +1,23 @@
+.logo-text {
+  font-family: Papyrus, fantasy;
+}
+
+.text {
+  font-family: Papyrus, fantasy;
+  color: maroon;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
+
+.header-row {
+  background: maroon;
+}
+
+.background_image {
+  background: url("../images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}

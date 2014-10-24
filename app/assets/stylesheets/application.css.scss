@@ -10,31 +10,11 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
  */
-.flex-container {
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: flex-start;
-    align-items: stretch;
-}
-.title{
-    font-family: Papyrus, fantasy;
-}
 
-#header {
-    background-color: blue;
-    opacity: 50;
-}
-body {
-    background: blueviolet url("../images/PNG_transparency_demonstration_1.png");
-    /*background-repeat: repeat-y;*/
-}
-
-object {
-    margin: auto;
-}
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'share/global';
+@import 'share/game';
+@import 'share/about';
 
