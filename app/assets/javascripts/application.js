@@ -16,7 +16,4 @@
 //= require_tree .
 
 $(document).on('ready', function () {
-    $('.game-link').on('click', function () {
-        console.log('this works');
-    });
 });
