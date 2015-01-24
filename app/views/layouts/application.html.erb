@@ -7,7 +7,7 @@
   <%= favicon_link_tag 'favicon.ico' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body data-controller="<%= controller_name %>" data-action="<%= action_name %>">
 <nav class="navbar navbar-inverse navbar-static-top">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -23,10 +23,13 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="<%= root_path %>">Home</a></li>
         <li class="active"><a href="<%= about_path %>">About</a></li>
-        <li class="active"><a href="#games">Games</a></li>
+        <li class="active"><a href="<%= user_games_path(params[:id] || 0) %>">Games</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="<%= signin_path %>">Login</a></li>
+        <li class="active"><a href="<%= new_session_path %>">Login</a></li>
+        <% if session[:user_id] %>
+            <li class="active"><a href="<%= session_path(session[:user_id]) %>">Logout</a></li>
+        <% end %>
         <li class="active"><a href="<%= new_user_path %>">Sign Up</a></li>
       </ul>
     </div>

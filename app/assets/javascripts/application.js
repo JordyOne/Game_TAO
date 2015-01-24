@@ -15,5 +15,4 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
-$(document).on('ready', function () {
-});
+$(document).ready(UTIL.init);

@@ -4,6 +4,6 @@
 
 <ul>
     <% @games.each do |game| %>
-        <li><h1><a href="/games/<%= game.id %>" class="game-link text"><%= game.name %></a></h1></li>
+        <li><h1><a href="<%= user_game_path(@user.id, game.id) %>" class="game-link text"><%= game.name %></a></h1></li>
     <% end %>
 </ul>

@@ -7,4 +7,7 @@ class User < ActiveRecord::Base
   validates :password,
             :presence => {:message => "Your Account could not be created"}
 
+  def self.id
+    self[:id]
+  end
 end

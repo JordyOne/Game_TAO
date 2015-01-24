@@ -1,13 +1,22 @@
+//Garber-Irish Implementation
+
 SITE = {
     common: {
         init: function () {
-            Time.startLog
+
         }
     },
 
-    users: {}
+    games: {
+        init: function() {},
 
+        show: function () {
+            TIME.startLog;
+            TIME.endLog;
+        }
+    }
 };
+
 
 UTIL = {
     exec: function (controller, action) {
@@ -30,4 +39,3 @@ UTIL = {
     }
 };
 
-$(document).ready(UTIL.init);

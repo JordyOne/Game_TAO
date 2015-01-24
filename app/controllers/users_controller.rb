@@ -11,8 +11,9 @@ class UsersController < ApplicationController
         password: params[:user][:password]
     )
     if @user.save
+      session[:user_id] = @user.id
       flash[:notice] = "You signed up successfully"
-      redirect_to root_path
+      redirect_to user_path(@user.id)
     else
       render :new
     end
@@ -20,10 +21,8 @@ class UsersController < ApplicationController
 
   def show
     if session[:user_id]
-      @user = User.find(session[:user_id])
       @games = Game.all
-    else
-      @user = 'this is not working'
+      @user = User.find(session[:user_id])
     end
   end
 end
